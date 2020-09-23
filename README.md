@@ -1,2 +1,2 @@
 # portfolio
- Byunjun's protfolio
+ Byungjun's protfolio
