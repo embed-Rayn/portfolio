@@ -355,3 +355,24 @@ section {
 .testimonial__speech-bubble a {
   color: var(--color-pink);
 }
+/* Contact */
+#contact {
+  background-color: var(--color-orange);
+}
+.contact__title,
+.contact__email {
+  color: var(--color-white);
+}
+.contact__title {
+  margin: 32px;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px, 0px;
+}
+
+.contact__links i:hover {
+  transform: scale(1.5);
+  color: #e84935;
+  transition: all 1000ms ease;
+}
