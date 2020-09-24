@@ -3,24 +3,13 @@
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  console.log(navbarHeight);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
   } else {
     navbar.classList.remove("navbar--dark");
   }
 });
-
-// const home = document.querySelector("#home");
-// const home_top = home.getBoundingClientRect().top;
-// document.addEventListener("click",()=>{
-//   window.scrollTo(0, home_top);
-// })
-// const about = document.querySelector(".navbar__menu__item#home");
-// const about_top = about.getBoundingClientRect().top;
-// about.addEventListener("click", () => {
-//   window.scrollTo(0, about_top);
-// });
+//Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -28,6 +17,16 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+// Handle click on "contact me" button on home
+const contactMe = document.querySelector(".home__contact");
+contactMe.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
