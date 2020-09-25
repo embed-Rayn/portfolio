@@ -396,7 +396,22 @@ section {
   color: #e84935;
   transition: all 1000ms ease;
 }
+/* arrow-up */
+.arrow-up {
+  font-size: 50px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
 
+.arrow-up.visible {
+  display: block;
+}
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
