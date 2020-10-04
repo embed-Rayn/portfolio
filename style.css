@@ -128,7 +128,7 @@ button {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 8px;
+  top: 12px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
@@ -342,17 +342,18 @@ section {
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 .project__description h3:after {
   display: block;
   position: relative;
   left: 50%;
   content: "";
-  width: 25px;
+  width: 50px;
   height: 2px;
   margin-left: -12px;
   background-color: var(--color-dark-white);
+  transform: translateX(-30%);
 }
 /* Testimonials */
 #testimonials {
@@ -436,11 +437,19 @@ section {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
   .about__major {
     flex-direction: column;
