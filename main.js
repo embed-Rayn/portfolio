@@ -58,6 +58,7 @@ navbarMenu.addEventListener("click", (event) => {
 });
 //--------Work--------
 //Project
+/////////////////////////////////약간의 에러있음
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
@@ -66,6 +67,13 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+  // Remove selection from the previous item and select the new one.
+  const active = document.querySelector(".category_btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  e.target.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
 
   setTimeout(() => {
